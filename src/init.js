@@ -25,10 +25,19 @@ $(document).ready(function(){
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 500
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+  });
+
+  $(".lineupButton").on("click", function(){
+    var xValue = 10;
+    for(var i = 0; i < window.dancers.length; i++){
+      window.dancers[i].lineUp(xValue);
+      // xValue += window.dancers[i].$node.height();
+      xValue += 200;
+    }
   });
 });
 

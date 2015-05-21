@@ -1,14 +1,14 @@
 var makeJT = function (top, left, timeBetweenSteps) {
     makeDancer.call(this, top, left, timeBetweenSteps);
-    this.$node  = $("<img src='./giphy-1.gif'>");
+    this.$node.append("<img height='288px' width='200' src='./giphy-1.gif' >");
+
 
 }
 
-
 makeJT.prototype = Object.create(makeDancer.prototype);
-makeJT.prototype.constructor = makeTJ;
+makeJT.prototype.constructor = makeJT;
 
-
-makeTJ.prototype.step = function () {
+makeJT.prototype.step = function () {
   makeDancer.prototype.step.call(this);
+  this.$node.css({'border':'none'});
 }
