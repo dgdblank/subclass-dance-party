@@ -63,6 +63,10 @@ makeDancer.prototype.lineUp = function(xValue){
   this.setPosition(10, xValue);
 }
 
+makeDancer.prototype.lineUpVertical = function (fromTop, fromLeft) {
+  this.setPosition(fromTop, fromLeft);
+}
+
 
 
 

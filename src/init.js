@@ -36,14 +36,40 @@ $(document).ready(function(){
   });
 
   $(".lineupButton").on("click", function(){
-    alert('wtf');
-    console.log('lineup');
     var xValue = 10;
     for(var i = 0; i < window.dancers.length; i++){
       window.dancers[i].lineUp(xValue);
       xValue += 200;
     }
   });
+
+  $(".danceOff").on("click", function () {
+    // we have an array of dancers
+    // randomize 2 of them, push into a seprate array
+    // position the 2 at the middle of the screen  50 px apart,
+    // the rest, half on the left of the screen. half on the right of the screen
+    // var leftHalf = [];
+    // var rightHalf = [];
+    var fromLeftFirstGroup = 100;
+    var fromLeftSecoundGroup = 800;
+    var startFromTopFirstGroup = 5;
+    var startFromTopSecondGroup = 5;
+    for (var i = 0; i<window.dancers.length; i++) {
+      if (i<window.dancers.length/2) {
+        // leftHalf.push(window.dancers[i]);
+        window.dancers[i].lineUpVertical(startFromTopFirstGroup, fromLeftFirstGroup);
+        startFromTopFirstGroup += 200;
+      } else {
+        // rightHalf.push(window.dancers[i]);
+        window.dancers[i].lineUpVertical(startFromTopSecondGroup, fromLeftSecoundGroup);
+        startFromTopSecondGroup += 200;
+      }
+    }
+
+    $('window.dancers[0]').animate({'left': +300px'}, 'slow');
+  })
+
+
 
 });
 
