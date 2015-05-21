@@ -37,7 +37,7 @@
 
 var makeDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="dancer"></span>');
-  // this.timeBetweenSteps = timeBetweenSteps;
+  this.timeBetweenSteps = timeBetweenSteps;
   // this.top = top;
   // this.left = left;
   this.step();
@@ -47,7 +47,6 @@ var makeDancer = function(top, left, timeBetweenSteps){
 
 makeDancer.prototype.step = function () {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
-  console.dir(this);
 }
 makeDancer.prototype.setPosition = function(top, left){
   // Use css top and left properties to position our <span> tag

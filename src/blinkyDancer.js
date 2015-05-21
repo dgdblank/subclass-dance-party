@@ -24,6 +24,7 @@
 
 var makeBlinkyDancer = function (top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass("red");
 }
 
 
