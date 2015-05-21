@@ -29,28 +29,21 @@ $(document).ready(function(){
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+
+    $(function() {
+      $('.dancer').draggable();
+    });
   });
 
   $(".lineupButton").on("click", function(){
+    alert('wtf');
     console.log('lineup');
     var xValue = 10;
     for(var i = 0; i < window.dancers.length; i++){
       window.dancers[i].lineUp(xValue);
-      // xValue += window.dancers[i].$node.height();
       xValue += 200;
     }
   });
 
-  // $(".Justin").on("click", function(){
-  //   // debugger;
-  //   console.log(this);
-  //   console.log('wtf2');
-  //   console.log(e.pageX);
-  // })
-  // $('.Justin').mousemove(function(e) {
-  //   this.css({'left': e.pageX, 'top': e.pageY});
-  //   console.log(e.pageX);
-  //   console.log(y.pageY);
-  });
 });
 
