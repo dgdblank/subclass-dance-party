@@ -3,17 +3,14 @@ body, html{
 }
 body{
   margin: 0px;
-  /*background-color:#444;*/
   background: url(background.jpg) no-repeat;
   background-size: 100%;
-  /*background-repeat: */
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
 img{
-  /*position: absolute;*/
   top: 30px;
   left: 500px;
 }
@@ -33,4 +30,3 @@ img{
   border-radius:100px;
   position:absolute;
 }
-
